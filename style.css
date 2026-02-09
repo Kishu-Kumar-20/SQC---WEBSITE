@@ -1,0 +1,167 @@
+:root {
+    --bg-dark: #0f1117;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --accent: #00f5ff;
+    --text: #e6e6e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url("hero.png") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 25px;
+    margin: 10px;
+    border: 1px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--accent);
+    color: black;
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat h2 {
+    font-size: 3rem;
+    color: var(--accent);
+}
+
+/* DOMAIN CARDS */
+.domain-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    padding: 40px;
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px var(--accent);
+}
+
+/* TERMINAL */
+.terminal {
+    background: black;
+    padding: 30px;
+    font-family: 'JetBrains Mono', monospace;
+    border-radius: 10px;
+    color: #00ff88;
+}
+
+/* CONTACT */
+.contact-box {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: black;
+    border: none;
+    color: var(--accent);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .domain-grid {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
